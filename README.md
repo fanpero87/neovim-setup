@@ -1,4 +1,4 @@
-# NewoVim Setup
+# NeoVim Setup
 
 This is my `nvim` configuration.
 I copied almost everything from this [Youtube video](https://www.youtube.com/watch?v=vdn_pKJUda8) and have made a few changes along the way.
@@ -31,4 +31,29 @@ This is the `file tree` this repo is following
     `-- packer_compiled.lua
 ```
 
-To use this repo, just clone it inside the `~/.config/nvim` folder
+## Pre-requisites
+
+- NeoVim Installed
+- Nodejs Installed
+
+## How to use this Repo
+
+- Clone it inside the `~/.config` folder
+- Remane the folder from`neovim-setup` to `nvim`
+- Open the `init.lua` file so Packer can start the installation of all packages
+- Run `:Mason` to install the LSP servers from the config files
+
+### Troubleshoot
+
+If you have problems with the initial setup, you can use commands like:
+
+```
+# To manually install packages
+:PackerInstall
+
+# To see all installed packages
+:PackerStatus
+
+# To Sync the configuration
+:PackerSync
+```
