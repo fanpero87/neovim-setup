@@ -20,10 +20,7 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 -- cursor line
 opt.cursorline = true -- highlight the current cursor line
 
--- appearance
-
--- turn on termguicolors for nightfly colorscheme to work
--- (have to use iterm2 or any other true color terminal)
+-- turn on termguicolors for colorscheme to work
 opt.termguicolors = true
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
@@ -45,9 +42,24 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
+----------------------
+-- Colorscheme
+----------------------
+
+-- set colorscheme to with protected call in case it isn't installed
+local status, _ = pcall(vim.cmd, "colorscheme nightfox")
+if not status then
+	print("Colorscheme not found!") -- print error if colorscheme not installed
+	return
+end
+
 ---------------------
 -- General Keymaps
 ---------------------
+
+-- change default up and down keys
+keymap.set("n", "j", "k")
+keymap.set("n", "k", "j")
 
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>")
@@ -98,15 +110,3 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
-
-----------------------
--- Colorscheme
-----------------------
-
--- set colorscheme to nightfly with protected call
--- in case it isn't installed
-local status, _ = pcall(vim.cmd, "colorscheme nightfly")
-if not status then
-	print("Colorscheme not found!") -- print error if colorscheme not installed
-	return
-end
