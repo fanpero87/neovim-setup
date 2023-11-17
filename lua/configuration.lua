@@ -40,13 +40,11 @@ opt.iskeyword:append("-") -- consider string-string as whole word
 -- set leader key to space
 vim.g.mapleader = " "
 
-local keymap = vim.keymap -- for conciseness
-
 ----------------------
 -- Colorscheme
 ----------------------
 
--- set colorscheme to with protected call in case it isn't installed
+-- set colorscheme with protected call in case it isn't installed
 local status, _ = pcall(vim.cmd, "colorscheme nightfox")
 if not status then
 	print("Colorscheme not found!") -- print error if colorscheme not installed
@@ -57,9 +55,11 @@ end
 -- General Keymaps
 ---------------------
 
+local keymap = vim.keymap -- for conciseness
+
 -- change default up and down keys
-keymap.set("n", "j", "k")
-keymap.set("n", "k", "j")
+keymap.set("n", "j", "k") -- j to go UP
+keymap.set("n", "k", "j") -- k to go DWON
 
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>")
@@ -110,3 +110,20 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+----------------------
+-- Default Keybinds from other plugins
+----------------------
+--
+-- Tmux-navigator Plugin
+-- Use ctrl and h,j,k,l to move between windows
+
+-- Vim-surround Plugin
+--
+
+-- Vim-ReplaceWithRegister Plugin
+--
+
+-- Comment Plugin
+-- "gc + c" -- omment/Uncomment the whole line you are in
+-- "gc + #lines + j" -- comment/uncomment the # of lines you want

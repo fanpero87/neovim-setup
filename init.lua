@@ -6,8 +6,8 @@ require("configuration")
 
 -- Loads additional config for some packages
 require("plugins.comment")
-require("plugins.nvim-tree")
 require("plugins.lualine")
+require("plugins.nvim-tree")
 require("plugins.telescope")
 require("plugins.nvim-cmp")
 require("plugins.lsp.mason")

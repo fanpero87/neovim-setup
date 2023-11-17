@@ -33,7 +33,7 @@ This is the `file tree` this repo is following
 
 ## Pre-requisites
 
-- NeoVim Installed
+- NeoVim v0.9 or Higher installed
 - Nodejs Installed
 
 ## How to use this Repo

@@ -30,15 +30,15 @@ end
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- packer can manage itself
 
+	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
+
 	use("EdenEast/nightfox.nvim") -- Color Theme
-	--use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 
 	use("nvim-lualine/lualine.nvim") -- statusline
-	--  requires
+
+	-- required for statusline
 	use("nvim-tree/nvim-tree.lua") -- file explorer
 	use("nvim-tree/nvim-web-devicons") -- vs-code like icons
-
-	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -51,8 +51,8 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim") -- commenting with gc
 
 	-- fuzzy finding w/ telescope
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
