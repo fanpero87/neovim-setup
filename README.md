@@ -38,8 +38,8 @@ This is the `file tree` this repo is following
 
 ## How to use this Repo
 
-- Clone it inside the `~/.config` folder
-- Remane the folder from`neovim-setup` to `nvim`
+- Clone it inside the `~/.config` folder and save the content on a folder named `nvim`
+  `git clone https://github.com/fanpero87/neovim-setup.git /.config/nvim`
 - Open the `init.lua` file so Packer can start the installation of all packages
 - Run `:Mason` to install the LSP servers from the config files
 
