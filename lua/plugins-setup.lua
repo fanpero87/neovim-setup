@@ -33,7 +33,7 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	use("EdenEast/nightfox.nvim") -- Color Theme
-
+	use { "catppuccin/nvim", as = "catppuccin" } -- New Color Theme
 	use("nvim-lualine/lualine.nvim") -- statusline
 
 	-- required for statusline

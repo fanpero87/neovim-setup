@@ -5,6 +5,7 @@ require("plugins-setup")
 require("configuration")
 
 -- Loads additional config for some packages
+require("plugins.catppuccin")
 require("plugins.comment")
 require("plugins.lualine")
 require("plugins.nvim-tree")
