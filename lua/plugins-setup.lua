@@ -33,7 +33,7 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	use("EdenEast/nightfox.nvim") -- Color Theme
-	use { "catppuccin/nvim", as = "catppuccin" } -- New Color Theme
+	use({ "catppuccin/nvim", as = "catppuccin" }) -- New Color Theme
 	use("nvim-lualine/lualine.nvim") -- statusline
 
 	-- required for statusline
@@ -53,6 +53,7 @@ return packer.startup(function(use)
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
+	use("nvim-lua/plenary.nvim") -- dependency required
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
