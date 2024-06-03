@@ -57,3 +57,5 @@ If you have problems with the initial setup, you can use commands like:
 # To Sync the configuration
 :PackerSync
 ```
+
+`BurntSushi/ripgrep` package is required for `telescope live_grep`. If you use Ubuntu you can just install it y running `apt-get install ripgrep`
