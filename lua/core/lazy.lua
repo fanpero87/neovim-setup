@@ -13,12 +13,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- add list of all the plugins to install
-require("lazy").setup("plugins", {
+require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" } }, {
 	checker = {
-    enabled = true,
-    notify = false,
-  },
-  change_detection = {
+		enabled = true,
+		notify = false,
+	},
+	change_detection = {
 		notify = false,
 	},
 })
