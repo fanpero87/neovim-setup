@@ -21,19 +21,19 @@ return {
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
-				"ts_ls",
 				"bashls",
-				"html",
 				"cssls",
-				"tailwindcss",
-				"lua_ls",
 				"emmet_ls",
+				"eslint",
+				"html",
+				"intelephense",
+				"jsonls",
+				"lua_ls",
+				"phpactor",
 				"prismals",
 				"pyright",
-				"eslint",
-				"intelephense",
-				"phpactor",
-				"jsonls",
+				"tailwindcss",
+				"ts_ls",
 			},
 		})
 	end,

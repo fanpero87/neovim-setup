@@ -1,16 +1,16 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
-	dependencies = {
-		"JoosepAlviste/nvim-ts-context-commentstring",
-		"nvim-treesitter/nvim-treesitter-textobjects",
-	},
-	event = { "BufReadPre", "BufNewFile" },
-	build = ":TSUpdate",
-	config = function()
-		local config = require("nvim-treesitter.configs")
-		config.setup({
-			highlight = { enable = true },
-			indent = { enable = true },
+  "nvim-treesitter/nvim-treesitter",
+  dependencies = {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    "nvim-treesitter/nvim-treesitter-textobjects",
+  },
+  event = { "BufReadPre", "BufNewFile" },
+  build = ":TSUpdate",
+  config = function()
+    local config = require("nvim-treesitter.configs")
+    config.setup({
+      highlight = { enable = true },
+      indent = { enable = true },
       ensure_installed = {
         "bash",
         "blade",
@@ -32,7 +32,7 @@ return {
         "dockerfile",
         "gitignore",
       },
-		})
+    })
     vim.treesitter.language.register("bash", "zsh")
-	end,
+  end,
 }
