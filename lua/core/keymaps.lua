@@ -47,11 +47,11 @@ vim.keymap.set('v', '<C-k>', ":move '<-2<CR>gv=gv") --move the whole line down w
 -- Disable annoying command line typo.
 vim.keymap.set('n', 'q:', ':q')
 
-
 -- Buffers
-vim.keymap.set('n', '<leader>bn', ':bnext<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>bp', ':bprev<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>bl', ':buffers<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>bn', ':bnext<CR>', { noremap = true, silent = true, desc = 'Go to previous buffer' })
+vim.keymap.set('n', '<leader>bp', ':bprev<CR>', { noremap = true, silent = true, desc = 'Go to next buffer' })
+vim.keymap.set('n', '<leader>bl', ':buffers<CR>', { noremap = true, silent = true, desc = 'Show list of open buffers' })
+vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { noremap = true, silent = true, desc = 'Close current buffer'})
 
 ----------------------
 -- Keybinds from other plugins
