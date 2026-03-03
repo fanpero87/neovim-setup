@@ -9,7 +9,6 @@ return {
 				null_ls.builtins.formatting.prettier,
 				null_ls.builtins.formatting.black, -- for Python
 				null_ls.builtins.formatting.isort, -- for Python
-				null_ls.builtins.diagnostics.phpmd,
 			},
 		})
 

@@ -13,15 +13,7 @@ return {
 			capabilities = capabilities,
 		})
 
-		vim.lsp.config("nginx_language_server", {
-			filetypes = { "nginx" },
-		})
-
 		vim.lsp.config("intelephense", {
-			filetypes = { "php" },
-		})
-
-		vim.lsp.config("phpactor", {
 			filetypes = { "php" },
 		})
 

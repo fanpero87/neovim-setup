@@ -29,7 +29,6 @@ return {
 				"intelephense",
 				"jsonls",
 				"lua_ls",
-				"phpactor",
 				"prismals",
 				"pyright",
 				"tailwindcss",
