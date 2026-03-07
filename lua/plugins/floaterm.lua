@@ -7,7 +7,7 @@ return {
 		vim.keymap.set("t", "tT", "<C-\\><C-n>:FloatermToggle<CR>")
 		vim.cmd([[
       highlight link Floaterm CursorLine
-      highlight link FloatermBorder CursorLineBg
+      highlight link FloatermBorder CursorLine
     ]])
 	end,
 }

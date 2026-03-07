@@ -4,7 +4,7 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
-		{ "folke/neodev.nvim", opts = {} },
+		{ "folke/lazydev.nvim", opts = {} },
 	},
 	config = function()
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -36,13 +36,18 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<Leader>d", vim.diagnostic.open_float, {}) -- show diagnostics for line
-		vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, {}) -- jump to previous diagnostic in buffer
-		vim.keymap.set("n", "]d", vim.diagnostic.goto_next, {}) -- jump to next diagnostic in buffer
-		vim.keymap.set("n", "K", vim.lsp.buf.hover, {}) -- show documentation for what is under cursor
-		vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-		vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
-		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {}) -- see available code actions
-		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {}) -- smart rename
-	end,
+    vim.api.nvim_create_autocmd('LspAttach', {
+      callback = function(ev)
+        local opts = { buffer = ev.buf, silent = true}
+		    vim.keymap.set("n", "<Leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
+		    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
+		    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+		    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+		    vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, opts)
+		    vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, opts)
+		    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions
+		    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
+	    end,
+    })
+  end,
 }

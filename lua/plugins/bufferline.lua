@@ -13,7 +13,7 @@ return {
         max_name_length = 25,
         offsets = {
           {
-            filetype = "NvimTree",
+            filetype = "neo-tree",
             text = "  Files",
             highlight = "StatusLine",
             text_align = "left",

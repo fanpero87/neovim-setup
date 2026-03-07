@@ -23,7 +23,7 @@ vim.keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
 -- window management
 vim.keymap.set("n", "<leader>wv", "<C-w>v")        -- split window vertically
---vim.keymap.set("n", "<leader>wh", "<C-w>s") -- split window horizontally
+vim.keymap.set("n", "<leader>wh", "<C-w>s")        -- split window horizontally
 vim.keymap.set("n", "<leader>se", "<C-w>=")        -- make split windows equal width & height
 vim.keymap.set("n", "<leader>sx", ":close<CR>")    -- close current split window
 vim.keymap.set("n", "<leader>wh", "<C-w>h")        -- move to the window on the left
@@ -36,20 +36,12 @@ vim.keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 vim.keymap.set("n", "<leader>tn", ":tabn<CR>")     --  go to next tab
 vim.keymap.set("n", "<leader>tp", ":tabp<CR>")     --  go to previous tab
 
--- Move lines up and down
-vim.keymap.set('i', '<C-j>', '<Esc>:move .+1<CR>==gi') --move the whole line up while on insert mode
-vim.keymap.set('i', '<C-k>', '<Esc>:move .-2<CR>==gi') --move the whole line down while on insert mode
-vim.keymap.set('n', '<C-j>', ':move .+1<CR>==') --move the whole line up while on normal mode
-vim.keymap.set('n', '<C-k>', ':move .-2<CR>==') --move the whole line down while on normal mode
-vim.keymap.set('v', '<C-j>', ":move '>+1<CR>gv=gv") --move the whole line up while on visual mode
-vim.keymap.set('v', '<C-k>', ":move '<-2<CR>gv=gv") --move the whole line down while on visual mode
-
 -- Disable annoying command line typo.
-vim.keymap.set('n', 'q:', ':q')
+vim.keymap.set('n', 'q:', ':q<CR>')
 
 -- Buffers
-vim.keymap.set('n', '<leader>bn', ':bnext<CR>', { noremap = true, silent = true, desc = 'Go to previous buffer' })
-vim.keymap.set('n', '<leader>bp', ':bprev<CR>', { noremap = true, silent = true, desc = 'Go to next buffer' })
+vim.keymap.set('n', '<leader>bn', ':bnext<CR>', { noremap = true, silent = true, desc = 'Go to next buffer' })
+vim.keymap.set('n', '<leader>bp', ':bprev<CR>', { noremap = true, silent = true, desc = 'Go to previous buffer' })
 vim.keymap.set('n', '<leader>bl', ':buffers<CR>', { noremap = true, silent = true, desc = 'Show list of open buffers' })
 vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { noremap = true, silent = true, desc = 'Close current buffer'})
 
