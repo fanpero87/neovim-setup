@@ -2,10 +2,12 @@ return {
 	"mason-org/mason.nvim",
 	dependencies = {
 		"mason-org/mason-lspconfig.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
 	config = function()
 		local mason = require("mason")
 		local mason_lspconfig = require("mason-lspconfig")
+    local mason_tool_installer = require("mason-tool-installer")
 
 		-- enable mason and configure icons
 		mason.setup({
@@ -18,8 +20,8 @@ return {
 			},
 		})
 
+    -- LSP servers ONLY
 		mason_lspconfig.setup({
-			-- list of servers for mason to install
 			ensure_installed = {
 				"bashls",
 				"cssls",
@@ -33,13 +35,18 @@ return {
 				"pyright",
 				"tailwindcss",
 				"ts_ls",
+			},
+		})
+
+    -- Formatters, linters, DAP adapters go here
+    mason_tool_installer.setup({
+      ensure_installed = {
         "pint",
         "php-cs-fixer",
         "shfmt",
         "shellcheck",
         "php-debug-adapter",
-        "nginx-language-server",
-			},
-		})
+      },
+    })
 	end,
 }

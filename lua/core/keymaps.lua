@@ -8,7 +8,7 @@ vim.g.maplocalleader = " "
 
 -- change default up and down keys
 vim.keymap.set("n", "j", "k") -- j to go UP
-vim.keymap.set("n", "k", "j") -- k to go DOwN
+vim.keymap.set("n", "k", "j") -- k to go DOWN
 
 -- use jk to exit insert mode
 vim.keymap.set("i", "jk", "<ESC>")

@@ -7,7 +7,6 @@ return {
 			sources = {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettier,
-        null_ls.builtins.formatting.pint,          -- Laravel Pint (Laravel projects)
         null_ls.builtins.formatting.php_cs_fixer,  -- Alternative for non-Laravel PHP
         null_ls.builtins.formatting.shfmt,          -- bash/sh formatter
         null_ls.builtins.diagnostics.shellcheck,    -- bash static analysis

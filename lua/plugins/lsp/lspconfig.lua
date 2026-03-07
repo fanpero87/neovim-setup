@@ -33,10 +33,6 @@ return {
       },
 		})
 
-    vim.lsp.config("nginx_language_server", {
-      filetypes = { "nginx" },
-    })
-
 		vim.diagnostic.config({
 			virtual_text = true, -- Enable virtual text for diagnostics
 			signs = {
