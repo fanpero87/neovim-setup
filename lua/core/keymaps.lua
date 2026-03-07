@@ -8,7 +8,7 @@ vim.g.maplocalleader = " "
 
 -- change default up and down keys
 vim.keymap.set("n", "j", "k") -- j to go UP
-vim.keymap.set("n", "k", "j") -- k to go DWON
+vim.keymap.set("n", "k", "j") -- k to go DOwN
 
 -- use jk to exit insert mode
 vim.keymap.set("i", "jk", "<ESC>")
@@ -22,14 +22,14 @@ vim.keymap.set("n", "<leader>+", "<C-a>") -- increment
 vim.keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
 -- window management
-vim.keymap.set("n", "<leader>wv", "<C-w>v")        -- split window vertically
-vim.keymap.set("n", "<leader>wh", "<C-w>s")        -- split window horizontally
+vim.keymap.set("n", "<leader>sv", "<C-w>v")        -- split window vertically
+vim.keymap.set("n", "<leader>sh", "<C-w>s")        -- split window horizontally
 vim.keymap.set("n", "<leader>se", "<C-w>=")        -- make split windows equal width & height
 vim.keymap.set("n", "<leader>sx", ":close<CR>")    -- close current split window
-vim.keymap.set("n", "<leader>wh", "<C-w>h")        -- move to the window on the left
-vim.keymap.set("n", "<leader>wj", "<C-w>j")        -- move to the window above
-vim.keymap.set("n", "<leader>wk", "<C-w>k")        -- move to the window below
-vim.keymap.set("n", "<leader>wl", "<C-w>l")        -- move to the window on the right
+vim.keymap.set("n", "<leader>mh", "<C-w>h")        -- move to the window on the left
+vim.keymap.set("n", "<leader>mk", "<C-w>k")        -- move to the window above
+vim.keymap.set("n", "<leader>mj", "<C-w>j")        -- move to the window below
+vim.keymap.set("n", "<leader>ml", "<C-w>l")        -- move to the window on the right
 
 vim.keymap.set("n", "<leader>to", ":tabnew<CR>")   -- open new tab
 vim.keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab

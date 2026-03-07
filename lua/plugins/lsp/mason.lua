@@ -33,6 +33,12 @@ return {
 				"pyright",
 				"tailwindcss",
 				"ts_ls",
+        "pint",
+        "php-cs-fixer",
+        "shfmt",
+        "shellcheck",
+        "php-debug-adapter",
+        "nginx-language-server",
 			},
 		})
 	end,

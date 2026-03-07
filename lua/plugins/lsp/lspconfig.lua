@@ -15,7 +15,27 @@ return {
 
 		vim.lsp.config("intelephense", {
 			filetypes = { "php" },
+      settings = {
+        intelephense = {
+          environment = { phpVersion = "8.4" },
+          files = { maxSize = 5000000 },
+          stubs = {
+            "apache", "bcmath", "bz2", "calendar", "Core", "curl",
+            "date", "dom", "fileinfo", "filter", "gd", "hash",
+            "iconv", "intl", "json", "libxml", "mbstring", "mcrypt",
+            "mysql", "mysqli", "openssl", "pcntl", "pcre", "PDO",
+            "pdo_mysql", "Phar", "posix", "readline", "Reflection",
+            "session", "SimpleXML", "soap", "sockets", "sodium",
+            "SPL", "standard", "superglobals", "tokenizer", "xml",
+            "xmlreader", "xmlwriter", "yaml", "zip", "zlib",
+          },
+        },
+      },
 		})
+
+    vim.lsp.config("nginx_language_server", {
+      filetypes = { "nginx" },
+    })
 
 		vim.diagnostic.config({
 			virtual_text = true, -- Enable virtual text for diagnostics
