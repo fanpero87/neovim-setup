@@ -15,30 +15,36 @@ This is the `file tree` this repo is following
 │   │   └── options.lua
 │   └── plugins
 │       ├── alpha.lua
-│       ├── autopair.lua
+│       ├── autopairs.lua
 │       ├── bufferline.lua
-│       ├── catppuccin.lua
+│       ├── colorscheme.lua
 │       ├── comment.lua
-│       ├── completions.lua
+│       ├── dap.lua
 │       ├── floaterm.lua
 │       ├── gitsigns.lua
-│       ├── lsp-config.lua
+│       ├── indent-blankline.lua
+│       ├── lsp
+│       │   ├── lspconfig.lua
+│       │   └── mason.lua
 │       ├── lualine.lua
 │       ├── neo-tree.lua
 │       ├── none-ls.lua
 │       ├── nvim-cmp.lua
 │       ├── telescope.lua
 │       ├── tmux-navigator.lua
-│       └── treesitter.lua
+│       ├── treesitter.lua
+│       └── which-key.lua
 └── README.md
 ```
 
 ## Pre-requisites
 
 - NeoVim v0.11 or Higher installed
-- Nodejs Installed (Install a tool like `nvm` is recommended)
+- Nodejs Installed (A tool like `nvm` is recommended)
 - A `C` compiler. On Ubuntu distros you can do `sudo apt-get install build-essential`
 - Nerd Font to display some icons (Make sure the nerd font you set doesn't end with Mono)
+- Install `ripgrep` (Required for live_grep on Telescope)
+
 
 ## Installation
 - Make a backup of your current Neovim files
@@ -57,17 +63,17 @@ mv ~/.cache/nvim{,.bak}
 git clone https://github.com/fanpero87/neovim-setup.git ~/.config/nvim
 ```
 
+- Start Neovim (plugins will auto-install on first launch)
+
+
+## Post-Install
+
 - Remove the `.git` folder, so you can add it to your own repo later
+- Install treesitter parsers (auto-installs, but can force) by running `:TSUpdate`
+ 
 
-- Open the `init.lua` to start the installation of all packages
+## Troubleshoot
 
-- Run `:Mason` to install the LSP servers from the config files
-
-### Troubleshoot
-
-If you have problems with the initial setup, you can use commands like:
-
-```
-# Loads all plugins and check if everything is working correctly
-:LazyHealth
-```
+- To check health run `:checkhealth`
+- If the LSP is not working you can run `:LspInfo` or `:Mason`
+- If you have problems with the initial setup, you can run: `:LazyHealth`
